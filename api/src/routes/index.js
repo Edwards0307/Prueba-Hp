@@ -51,6 +51,7 @@ router.get("/types", async (req, res) => {
 router.post("/pokemons", async (req, res) => {
   const { Nombre, Vida, Ataque, Defensa, Velocidad, Altura, Peso, Tipo } =
     req.body;
+  console.log(Nombre, Vida, Ataque, Defensa, Velocidad, Altura, Peso, Tipo);
   try {
     const pokemonCreado = await crearPokemon(
       Nombre,
