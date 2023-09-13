@@ -33,12 +33,12 @@ Se debe enviar por body la informacion del pokemon a crear por ejemplo:
 {
   "Nombre": "Edwards",  
   "Vida": "50",  
-  "Ataque": "20",
-  "Defensa": "32",
-  "Velocidad": "25",
-  "Altura": "11",
-  "Peso": "52",
-  "Tipo": ["water"]
+  "Ataque": "20",  
+  "Defensa": "32",  
+  "Velocidad": "25",  
+  "Altura": "11",  
+  "Peso": "52",  
+  "Tipo": ["water"]  
 } 
 
 
