@@ -30,7 +30,7 @@ http://localhost:8001/pokemons (Esta para crear un pokemon) POST
 
 Se debe enviar por body la informacion del pokemon a crear por ejemplo:
 
-{
+{  
   "Nombre": "Edwards",  
   "Vida": "50",  
   "Ataque": "20",  
