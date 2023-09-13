@@ -1,7 +1,15 @@
+import {
+  Paged,
+  CardsContainer,
+} from "../../components/index";
+
 const Home = () => {
+
+
   return (
     <div>
-      <h1>Estoy en Home</h1>
+      <Paged />
+      <CardsContainer />
     </div>
   );
 };

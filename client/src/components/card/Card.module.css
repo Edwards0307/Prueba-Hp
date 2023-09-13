@@ -1,0 +1,23 @@
+.container {
+  border: 1px solid rgb(66, 60, 60); /* linea de borde */
+  background-color: rgb(158, 154, 150); /* Color de fondo */
+  border-radius: 10px; /* Bordes redondeados */
+  width: 164px; /* Ancho */
+  height: fit-content;
+  padding: 10px;
+  box-shadow: 0, 0, 50px black; /* Sombra */
+}
+
+.name {
+  font-weight: 600;
+}
+
+.info {
+  display: block;
+}
+
+.img {
+  width: 95%;
+  border: 1px solid rgb(66, 60, 60); /* linea de borde */
+  border-radius: 10px; /* Bordes redondeados */
+}

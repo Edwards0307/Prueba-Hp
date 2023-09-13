@@ -1,7 +1,9 @@
+import { CardsContainer } from "../../components/index";
+
 const Landing = () => {
   return (
     <div>
-      <h1>Estoy en landing</h1>
+      <CardsContainer />
     </div>
   );
 };
