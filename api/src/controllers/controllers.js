@@ -21,6 +21,18 @@ const traerPokemonsApi = async () => {
   }
 };
 
+const preLoadTypes = async () => {
+  const url = "https://pokeapi.co/api/v2/type";
+  const response = await axios.get(url);
+  const types = response.data;
+
+  types.results.forEach((tipo) => {
+    type.findOrCreate({
+      where: { Nombre: tipo.name },
+    });
+  });
+};
+
 const filtrarArrayApi = (arrayPokemones) => {
   const infoRelevante = arrayPokemones.map((pokemon) =>
     filtrarPokemonApi(pokemon)
@@ -245,4 +257,5 @@ module.exports = {
   traerTipos,
   crearPokemon,
   traerPokemonsApi,
+  preLoadTypes,
 };
