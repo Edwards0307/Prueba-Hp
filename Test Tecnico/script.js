@@ -40,4 +40,4 @@ function cuadroMagico(N) {
   }
 }
 
-cuadroMagico(2);
+cuadroMagico(5);
