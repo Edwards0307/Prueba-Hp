@@ -1,15 +1,11 @@
 import style from "./Card.module.css";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 export default function Card({
   id,
   nombre,
-  ataque,
-  vida,
-  defensa,
-  velocidad,
   foto,
-  tipo,
 }) {
   return (
     <div className={style.container}>
@@ -17,15 +13,23 @@ export default function Card({
         <h2>{nombre}</h2>
       </div>
 
-      <Link to={`/Detail/${id}`}>
+      <Link to={`/detail/${id}`}>
         <div className={style.info}>
           <img className={style.img} src={foto} alt="" />
         </div>
       </Link>
 
-      <h4>Ataque: {ataque}</h4>
-
-      <h4>Vida: {vida}</h4>
     </div>
   );
 }
+
+Card.propTypes = {
+  id: PropTypes.number.isRequired,
+  nombre: PropTypes.string.isRequired,
+  ataque: PropTypes.number.isRequired,
+  vida: PropTypes.number.isRequired,
+  defensa: PropTypes.number.isRequired,
+  velocidad: PropTypes.number.isRequired,
+  foto: PropTypes.string.isRequired,
+  tipo: PropTypes.string.isRequired,
+};

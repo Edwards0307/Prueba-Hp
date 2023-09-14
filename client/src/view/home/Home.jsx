@@ -1,6 +1,7 @@
 import {
   Paged,
   CardsContainer,
+  NavBar,
 } from "../../components/index";
 
 const Home = () => {
@@ -8,8 +9,9 @@ const Home = () => {
 
   return (
     <div>
-      <Paged />
+      <NavBar/>
       <CardsContainer />
+      <Paged />
     </div>
   );
 };

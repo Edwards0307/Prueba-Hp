@@ -1,7 +1,12 @@
+import { Link } from "react-router-dom";
+
 const Form = () => {
   return (
     <div>
-      <h1>Estoy en form</h1>
+      <Link to={"/home"}>
+        <button>Back</button>
+      </Link>
+      <h1>Pendiente por hacer</h1>
     </div>
   );
 };

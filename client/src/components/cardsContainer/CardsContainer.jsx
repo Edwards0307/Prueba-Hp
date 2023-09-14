@@ -38,9 +38,9 @@ const CardsContainer = () => {
         ) : (
           currentPokemons.map((pokemon) => {
             return (
-              <div key={pokemon?.id} className={style.wrapperList}>
+              <div key={pokemon?.ID} className={style.wrapperList}>
                 <Card
-                  id={pokemon?.id}
+                  id={pokemon?.ID}
                   nombre={pokemon?.Nombre}
                   ataque={pokemon?.Ataque}
                   vida={pokemon?.Vida}

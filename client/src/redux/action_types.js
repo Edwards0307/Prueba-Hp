@@ -1,2 +1,5 @@
 export const GET_POKEMONS = "GET_POKEMONS";
 export const RESET_PAGED = "RESET_PAGED";
+export const GET_POKEMON_DETAIL = "GET_POKEMON_DETAIL";
+export const GET_POKEMON_NAME = "GET_POKEMON_NAME";
+

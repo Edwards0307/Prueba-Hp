@@ -1,9 +1,11 @@
-import { CardsContainer } from "../../components/index";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
     <div>
-      <CardsContainer />
+      <Link to={"/home"}>
+        <button>Pokedex</button>
+      </Link>
     </div>
   );
 };

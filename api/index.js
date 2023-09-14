@@ -3,7 +3,7 @@ const { sequelize } = require("./src/db");
 require("dotenv").config();
 const { PORT } = process.env;
 const axios = require("axios");
-const {type} = require("./src/db")
+const { type } = require("./src/db");
 
 const preLoadTypes = async () => {
   const url = "https://pokeapi.co/api/v2/type";
@@ -18,7 +18,7 @@ const preLoadTypes = async () => {
 };
 
 app.listen(PORT, () => {
+  preLoadTypes();
   sequelize.sync({ force: true });
-  preLoadTypes()
   console.log(`Listen on port ${PORT}`);
 });

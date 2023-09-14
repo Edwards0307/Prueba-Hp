@@ -11,9 +11,12 @@ const {
 const router = Router();
 
 router.get("/pokemons", async (req, res) => {
-  const { name } = req.query;
+  let { name } = req.query;
+
   if (name) {
     try {
+      name = name.toLowerCase();
+      console.log(name);
       const pokemonEncontrado = await buscarNombrePokemon(name);
       res.status(200).json(pokemonEncontrado);
     } catch (error) {

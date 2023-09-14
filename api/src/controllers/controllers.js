@@ -1,12 +1,12 @@
 const { pokemon, type } = require("../db");
-const axios = require("axios")
+const axios = require("axios");
 
 let idCreados = 0;
 
 const traerPokemonsApi = async () => {
   try {
     const response = await axios.get(
-      "https://pokeapi.co/api/v2/pokemon?offset=0&limit=100"
+      "https://pokeapi.co/api/v2/pokemon?offset=0&limit=150"
     );
     const data = response.data;
 
@@ -135,7 +135,6 @@ const buscarPokemon = async (id) => {
   }
 };
 
-
 const buscarNombrePokemon = async (name) => {
   const resultado = await pokemon.findAll({
     where: { Nombre: name },
@@ -157,8 +156,10 @@ const buscarNombrePokemon = async (name) => {
     try {
       const response = await axios.get(url);
       const pokemonData = response.data;
-
-      return filtrarPokemonApi(pokemonData);
+      const objetoPokemon = filtrarPokemonApi(pokemonData);
+      const arrayPoke = []
+      arrayPoke.push(objetoPokemon)
+      return arrayPoke
     } catch (error) {
       throw Error(`No se encontro el pokemon con Nombre ${name}`);
     }
